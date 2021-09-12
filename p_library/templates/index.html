@@ -1,4 +1,4 @@
-Добро пожаловать в {{ title }}  <br>.
+Добро пожаловать в {{ title }}.  <br>
 Тут собрано {{ books|length }} книг из моей личной коллекции.
 
 <table border="1">
@@ -26,3 +26,16 @@
         </tr>
     {% endfor %}
 </table>
+
+Тестирование запросов <br>
+{{ test_result }} <br>
+Query set: {{ books }} <br>
+Средняя цена книг: {{ average_price }} <br>
+<br>
+{% for book in books %}
+    {{ book.book_authors}} <br>
+{% endfor %}
+<br>
+{% for author in authors %}
+    {{ author.authors_of_book }} <br>
+{% endfor %}
